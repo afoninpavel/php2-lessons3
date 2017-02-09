@@ -4,17 +4,7 @@ namespace App;
 
 class View
 {
-    protected $data = [];
-
-    public function __set($k, $v)
-    {
-        $this->data[$k] = $v;
-    }
-
-    public function __get($k)
-    {
-        return $this->data[$k];
-    }
+    use Magic;
 
     public function render($template)
     {
@@ -24,7 +14,6 @@ class View
         ob_end_clean();
         return $content;
     }
-
     public function display($template)
     {
         echo $this->render($template);

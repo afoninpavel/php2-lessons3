@@ -15,7 +15,8 @@ class Author
     extends Model
 
 {
-    const TABEL ='authors';
+    const TABLE = 'authors';
 
     public $name;
+
 }
